@@ -54,30 +54,8 @@ class TasksService{
         return task;
     }
 
-    // if(Object.keys(filterDto).length){
-    //     return this.taskService.getTasksWithFilter(filterDto);
-    // }else{
-    //     return this.taskService.getAllTasks();
-    // }
     async getAllTasks(filterDto:GetTasksFilterDto):Promise<Task[]>{
-
         return this.getTasks(filterDto)
-        
-        // const { status , search } = filterDto;
-        
-        // let tasksArray:Task[] = [];
-
-        // if(status){
-        //     tasksArray = await this.tasksRespository.findBy({ status });
-        // }
-
-        // if(search){
-        //     tasksArray = await this.tasksRespository.find({
-        //         where:{ title: Like(`%${search}%`), description:Like(`%${search}%`)},
-        //     })
-        // }
-
-        // return tasksArray;
     }
 
     async deleteTask(id:string):Promise<void>{
